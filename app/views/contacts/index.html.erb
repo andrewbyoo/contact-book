@@ -20,6 +20,8 @@
         <td><%= contact.email %></td>
         <td><%= contact.phone %></td>
         <td><%= link_to "View", contact %></td>
+        <td><%= link_to "Edit", edit_contact_path(contact) %></td>
+        <td><%= button_to "Delete", contact, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
