@@ -19,6 +19,10 @@
 
     <%= render 'home/header' %>
     <div class="container">
+      <% if notice %>
+        <br>
+        <%= render 'layouts/alerts'%>
+      <% end %>
       <%= yield %>
     </div>
     <footer>Footer here</footer>
