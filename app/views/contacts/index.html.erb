@@ -2,14 +2,14 @@
 
 <h1>Contacts</h1>
 
-<table id="contacts">
+<table class="table" id="contacts">
   <thead>
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
       <th>Phone</th>
-      <th> </th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +21,7 @@
         <td><%= contact.phone %></td>
         <td><%= link_to "View", contact %></td>
         <td><%= link_to "Edit", edit_contact_path(contact) %></td>
-        <td><%= button_to "Delete", contact, method: :delete %></td>
+        <td><%= button_to "X", contact, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
