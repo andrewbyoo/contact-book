@@ -2,8 +2,8 @@
 
 <h1>Contacts</h1>
 
-<table class="table" id="contacts">
-  <thead>
+<table class="table table-striped table-bordered table-hover" id="contacts">
+  <thead class="table-dark">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
@@ -19,12 +19,10 @@
         <td><%= contact.last_name %></td>
         <td><%= contact.email %></td>
         <td><%= contact.phone %></td>
-        <td><%= link_to "View", contact %></td>
-        <td><%= link_to "Edit", edit_contact_path(contact) %></td>
-        <td><%= button_to "X", contact, method: :delete %></td>
+        <td class="text-center"><%= link_to "View", contact %></td>
+        <td class="text-center"><%= link_to "Edit", edit_contact_path(contact) %></td>
+        <td class="text-center"><%= button_to "X", contact, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to "New contact", new_contact_path %>
