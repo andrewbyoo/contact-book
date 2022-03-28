@@ -1,4 +1,4 @@
-<%= form_with(model: contact) do |form| %>
+<%= form_with(model: contact, html: { data: { turbo: false } } ) do |form| %>
   <% if contact.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -29,6 +29,9 @@
   <div>
     <%= form.label :phone, style: "display: block" %>
     <%= form.text_field :phone, class:"form-control", placeholder:"ex. 111.222.3333" %>
+  </div>
+  <div>
+    <%= form.number_field :user_id, id: :contact_user_id, class: "form-control", value: current_user.id, type: :hidden %>
   </div>
 
   <br>
