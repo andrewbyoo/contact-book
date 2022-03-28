@@ -13,7 +13,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password, style: "display: block" %> <i>(leave blank if you don't want to change it)</i>
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+    <%= f.password_field :current_password, autocomplete: "current-password", style: "display: block", class: "form-control", placeholder: "Current Password" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
     <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:"New Password" %>
     <% if @minimum_password_length %>
       <em><%= @minimum_password_length %> characters minimum</em>
@@ -23,11 +28,6 @@
   <div class="field">
     <%= f.label :password_confirmation, style: "display: block" %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:"Confirm New Password" %>
-  </div>
-  <br>
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-    <%= f.password_field :current_password, autocomplete: "current-password", style: "display: block", class:"form-control", placeholder:"Current Password" %>
   </div>
   <br>
   <div class="actions">
