@@ -17,7 +17,7 @@ As a social person, I want a location I can keep my contacts so that, if I lose 
 - [Questions](#questions)
 
 ## Installation
-Next feature to come for setting app up as PWA.
+
 
 ## Usage
 The visual shows the user's contacts once signed in.
@@ -32,7 +32,6 @@ This application is covered under the MIT license.
 ## Features
 - Add, edit, and delete contacts.
 - Edit and delete account information.
-- (Future feature) PWA.
 
 ## Questions
 To view more of my projects, you can visit my GitHub page at [andrewbyoo](https://github.com/andrewbyoo).
