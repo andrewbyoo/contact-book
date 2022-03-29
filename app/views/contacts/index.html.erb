@@ -20,7 +20,7 @@
           <td><%= link_to contact.first_name + " " + contact.last_name, contact, class:"contact-link" %></td>
           <td><%= contact.email %></td>
           <td><%= contact.phone %></td>
-          <td class="text-center"><%= button_to "X", contact, method: :delete, class:"btn btn-secondary" %></td>
+          <td class="text-center"><%= button_to "Delete", contact, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } }, class:"btn btn-outline-danger btn-sm" %></td>
         </tr>
       <% end %>
     <% end %>
