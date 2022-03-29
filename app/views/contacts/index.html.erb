@@ -3,8 +3,7 @@
 <table class="table table-striped table-bordered table-hover align-middle" id="contacts">
   <thead class="table-dark">
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
       <th colspan="3"></th>
@@ -14,12 +13,9 @@
     <% @contacts.each do |contact| %>
       <% if contact.user == current_user %>
         <tr>
-          <td><%= contact.first_name %></td>
-          <td><%= contact.last_name %></td>
+          <td><%= link_to contact.first_name + " " + contact.last_name, contact %></td>
           <td><%= contact.email %></td>
           <td><%= contact.phone %></td>
-          <td class="text-center"><%= link_to "View", contact, class:"btn btn-secondary" %></td>
-          <td class="text-center"><%= link_to "Edit", edit_contact_path(contact), class:"btn btn-secondary" %></td>
           <td class="text-center"><%= button_to "X", contact, method: :delete, class:"btn btn-secondary" %></td>
         </tr>
       <% end %>
