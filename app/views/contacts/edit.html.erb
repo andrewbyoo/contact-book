@@ -5,6 +5,8 @@
   </div>
   <div class="card-body">
     <%= render "form", contact: @contact %>
+    <br>
+    <%= button_to "Delete", @contact, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class: "btn btn-outline-danger" %>
   </div>
 </div>
 
