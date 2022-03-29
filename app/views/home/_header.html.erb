@@ -6,9 +6,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to "About", home_about_path, class: "nav-link" %>
-        </li>
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "New Contact", new_contact_path, class: "nav-link" %>
