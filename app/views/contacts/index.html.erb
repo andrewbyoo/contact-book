@@ -12,15 +12,17 @@
   </thead>
   <tbody>
     <% @contacts.each do |contact| %>
-      <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td class="text-center"><%= link_to "View", contact, class:"btn btn-secondary" %></td>
-        <td class="text-center"><%= link_to "Edit", edit_contact_path(contact), class:"btn btn-secondary" %></td>
-        <td class="text-center"><%= button_to "X", contact, method: :delete, class:"btn btn-secondary" %></td>
-      </tr>
+      <% if contact.user == current_user %>
+        <tr>
+          <td><%= contact.first_name %></td>
+          <td><%= contact.last_name %></td>
+          <td><%= contact.email %></td>
+          <td><%= contact.phone %></td>
+          <td class="text-center"><%= link_to "View", contact, class:"btn btn-secondary" %></td>
+          <td class="text-center"><%= link_to "Edit", edit_contact_path(contact), class:"btn btn-secondary" %></td>
+          <td class="text-center"><%= button_to "X", contact, method: :delete, class:"btn btn-secondary" %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
