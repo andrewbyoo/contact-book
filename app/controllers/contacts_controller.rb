@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /contacts or /contacts.json
   def index
@@ -55,6 +57,11 @@ class ContactsController < ApplicationController
       format.html { redirect_to contacts_url, notice: "Contact was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def correct_user
+    @contact = current_user.friends.find_by(id: params[:id])
+    redirect_to contacts_path, notice: "Not authorized to edit this friend" if @contact.nil?
   end
 
   private
