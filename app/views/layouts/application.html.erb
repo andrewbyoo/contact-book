@@ -17,15 +17,15 @@
   </head>
   <body>
 
-    <%= render 'home/header' %>
+    <%= render "home/header" %>
     <div class="container">
       <% if notice %>
         <br>
-        <%= render 'layouts/alerts'%>
+        <%= render "layouts/alerts" %>
       <% end %>
       <%= yield %>
     </div>
-    <footer>Footer here</footer>
+    <div class="container fixed-bottom"><%= render "home/footer" %></div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
