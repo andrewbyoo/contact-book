@@ -16,7 +16,7 @@
     <% @contacts.each do |contact| %>
       <% if contact.user == current_user %>
         <tr>
-          <td><%= link_to contact.first_name + " " + contact.last_name, contact, class:"contact-link" %></td>
+          <td><%= link_to contact.first_name + " " + contact.last_name, contact, class: "contact-link" %></td>
           <td><%= contact.email %></td>
           <td><%= contact.phone %></td>
         </tr>
