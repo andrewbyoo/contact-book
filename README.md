@@ -17,7 +17,17 @@ As a social person, I want a location I can keep my contacts so that, if I lose 
 - [Questions](#questions)
 
 ## Installation
-
+Before following the start the app instructions, you must have Ruby and Rails installed.
+- To get the app on your local machine:
+  1. Click on the code button on the repo.
+  2. Copy the HTTPS or SSH link.
+  3. Run the command `git clone` with the copied HTTPS or SSH link.
+- To start the app:
+  1. Navigate to the repo in the terminal.
+  2. Run the command `bundle config set --local without 'production'`.
+  3. Run the command `bundle install`.
+  4. Run the command `rails s`.
+  5. Open the address `http://127.0.0.1:3000/` in your browser.
 
 ## Usage
 The visual shows the user's contacts once signed in.
