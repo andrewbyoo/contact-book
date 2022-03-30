@@ -14,6 +14,7 @@ As a social person, I want a location I can keep my contacts so that, if I lose 
 - [Link](#link)
 - [License](#license)
 - [Features](#features)
+- [Attribution](#attribution)
 - [Questions](#questions)
 
 ## Installation
@@ -34,7 +35,7 @@ The visual shows the user's contacts once signed in.
 ![Contact Book visual](./assets/contact-book-visual.png)
 
 ## Link
-Heroku link here once deployed.
+https://andrewbyoo-contact-book.herokuapp.com/
 
 ## License
 This application is covered under the MIT license.
@@ -42,6 +43,9 @@ This application is covered under the MIT license.
 ## Features
 - Add, edit, and delete contacts.
 - Edit and delete account information.
+
+## Attribution
+App build generally follows the guide from Codemy.com's youtube channel.
 
 ## Questions
 To view more of my projects, you can visit my GitHub page at [andrewbyoo](https://github.com/andrewbyoo).
